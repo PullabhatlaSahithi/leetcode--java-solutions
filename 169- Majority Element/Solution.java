@@ -1,18 +1,37 @@
+"""Moore's Voting Algorithm"""
+
 class Solution {
     public int majorityElement(int[] nums) {
-        HashMap<Integer,Integer> map=new HashMap<>();
-        for(int i=0;i<nums.length;i++)
-        {
-            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
-        }
-        for(int key:map.keySet())
-        {
-            if(map.get(key)>nums.length/2)
-            {
-                return key;
-            }
-        }
-
+       int count=0;
+       int ele=0;
+       for(int i=0;i<nums.length;i++)
+       {
+           if(count==0)
+           {
+                count=1;
+                ele=nums[i];
+           }
+           else if(nums[i]==ele)
+           {
+                count++;
+           }
+           else
+           {
+                count--;
+           }
+       }
+       int cnt1=0;
+       for(int i=0;i<nums.length;i++)
+       {
+              if(nums[i]== ele)
+              {
+                   cnt1++;
+              }
+       }
+       if(cnt1>(nums.length/2))
+       {
+           return ele;
+       }
         return -1;
     }
 }
