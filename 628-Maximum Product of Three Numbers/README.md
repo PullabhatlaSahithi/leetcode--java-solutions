@@ -68,7 +68,5 @@ A maximum product is **not always** obtained from the three largest numbers. Two
 
 ## Tags
 
-* Array
-* Greedy
-* One Pass
-* Math
+#array 
+#greedy
