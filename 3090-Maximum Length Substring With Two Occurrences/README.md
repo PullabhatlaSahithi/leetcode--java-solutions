@@ -1,7 +1,5 @@
 # LeetCode 3090 – Maximum Length Substring With Two Occurrences
 
-## Problem
-
 Given a string `s`, find the maximum length of a substring in which every character appears **at most twice**.
 
 ## Approach
